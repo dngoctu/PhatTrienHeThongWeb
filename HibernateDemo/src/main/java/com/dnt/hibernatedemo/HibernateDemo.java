@@ -22,16 +22,18 @@ import org.hibernate.Session;
 public class HibernateDemo {
 
     public static void main(String[] args) {
-            CategoryRepositoryImpl s = new CategoryRepositoryImpl();
-            s.getCategories().forEach(c -> System.out.println(c.getName()));
-            
-            ProductRepositoryImpl ser = new ProductRepositoryImpl();
-
-            Product p = new Product();
-            p.setName("ABC");
-            p.setPrice(12000000l);
-            p.setCategoryId(s.getCateById(1));
-            ser.addOrUpdate(p);
+        StatsRepositoryImpl s = new StatsRepositoryImpl();
+        s.statsRevenueByPeriod(2020, "QUARTER").forEach(ss -> System.out.printf("%d: %d\n\n", ss[0], ss[1]));
+//            CategoryRepositoryImpl s = new CategoryRepositoryImpl();
+//            s.getCategories().forEach(c -> System.out.println(c.getName()));
+//            
+//            ProductRepositoryImpl ser = new ProductRepositoryImpl();
+//
+//            Product p = new Product();
+//            p.setName("ABC");
+//            p.setPrice(12000000l);
+//            p.setCategoryId(s.getCateById(1));
+//            ser.addOrUpdate(p);
 //            Map<String, String> params = new HashMap<>();
 //            params.put("fromPrice", "18000000");
 //            params.put("toPrice", "22000000");
