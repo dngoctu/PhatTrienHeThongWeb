@@ -26,9 +26,9 @@
             <td>${p.name}</td>
             <td>${p.price} VNĐ.</td>
             <td>
-                <button class="btn btn-danger">Xóa</button>
-                <c:url value="/products/${p.id}" var="url" />
-                <a href="${url}" class="btn btn-info">Cập nhật</a>
+                <c:url value="/api/products/${p.id}" var="url" />
+                <a class="btn btn-info" href="<c:url value="/products/${p.id}" />">Cập nhật</a>
+                <button onclick="deleteProduct('${url}',${p.id})" class="btn btn-danger">Xóa</button>
             </td>
         </tr>
     </c:forEach>

@@ -24,8 +24,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class IndexController {
     @Autowired
     private CategoryService cateService;
+    
     @Autowired
     private ProductService prodService;
+    
     @ModelAttribute //Chay truoc RequestMapping
     public void commonAttribute(Model model){
         model.addAttribute("categories", this.cateService.getCates());

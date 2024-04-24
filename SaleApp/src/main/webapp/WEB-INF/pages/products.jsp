@@ -43,7 +43,7 @@
         <label for="sel1" class="form-label">Select list (select one):</label>
     </div>
         <div class="form-floating mt-3 mb-3">
-            <form:input type="file" accept=".png, .jpg" class="form-control" path="filee" id="file" name="file"/> 
+            <form:input type="file" accept=".png, .jpg" class="form-control" path="file" id="file" name="file"/> 
             <label for="file">Ảnh sản phẩm</label>
             <c:if test="${product.image != null}">
                 <<img src="${product.image}" width="200"/>

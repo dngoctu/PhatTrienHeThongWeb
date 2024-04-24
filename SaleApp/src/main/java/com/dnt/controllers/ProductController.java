@@ -34,7 +34,7 @@ public class ProductController {
     public String updateProductView(Model model, @PathVariable(value="productId") int id){
         model.addAttribute("product", this.prodService.getProductById(id));
         
-        return "product";
+        return "products";
     }
     
     @PostMapping("/products")
