@@ -27,7 +27,8 @@
             <td>${p.price} VNĐ.</td>
             <td>
                 <button class="btn btn-danger">Xóa</button>
-                <a href="#" class="btn btn-info">Cập nhật</a>
+                <c:url value="/products/${p.id}" var="url" />
+                <a href="${url}" class="btn btn-info">Cập nhật</a>
             </td>
         </tr>
     </c:forEach>
